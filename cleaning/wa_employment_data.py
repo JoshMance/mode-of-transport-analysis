@@ -7,7 +7,7 @@ YEAR_COLUMN_NAME = 'Unnamed: 0'
 NUM_COLUMN_NAME = "Employed total ;  Persons ;"
 HEADER_DATA_OFFSET = 9
 
-df = pd.read_excel('data/source-data/abs_vic_employment_data.xlsx', 
+df = pd.read_excel('data/source-data/abs_wa_employment_data.xlsx', 
                    sheet_name=[SHEET_NAME]
                    ).pop(SHEET_NAME)
 
@@ -26,4 +26,4 @@ new_df = pd.DataFrame(data = {'Year' : years,
                              }
                      )
 
-new_df.to_csv('data/cleaned-data/vic_employment_data.csv')
+new_df.to_csv('data/cleaned-data/wa_employment_data.csv')
