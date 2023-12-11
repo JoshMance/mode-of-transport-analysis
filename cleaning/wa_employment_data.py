@@ -2,14 +2,15 @@ import pandas as pd
 
 # https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release#data-downloads
 
+PATH = 'data/source-data/abs_wa_employment_data.xlsx'
 SHEET_NAME = 'Data1'
 YEAR_COLUMN_NAME = 'Unnamed: 0'
 NUM_COLUMN_NAME = "Employed total ;  Persons ;"
 HEADER_DATA_OFFSET = 9
 
-df = pd.read_excel('data/source-data/abs_wa_employment_data.xlsx', 
+df = pd.read_excel(PATH, 
                    sheet_name=[SHEET_NAME]
-                   ).pop(SHEET_NAME)
+                  ).pop(SHEET_NAME)
 
 
 dates = [str(date).split(" ")[0]
